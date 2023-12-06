@@ -2,9 +2,9 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/Header.jsx'
-import PersonalDetails from './components/PersonalDetails.jsx'
+import PersonalDetails from './components/FormComponents/PersonalDetails.jsx'
 import Resume from './components/Resume.jsx'
-
+import EducationDetails from './components/FormComponents/EducationDetails.jsx'
 function App(){
   const [personalDetails, setPersonalDetails] = useState({
                                                             fullName: "Alexandru Mosgoreanu",
@@ -24,7 +24,11 @@ function App(){
           <Header />
           <div className="app">  
               <form className="leftSidebar" action="">
+                <h2>Personal details</h2>
                 <PersonalDetails onChange={handlePersonalDetailsChange}/>
+                
+                <h2>Education</h2>
+                <EducationDetails />
               </form>
               <Resume {...personalDetails}/>
           </div>

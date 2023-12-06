@@ -3,7 +3,6 @@ import InputGroup from "./InputGroup";
 function PersonalDetails({ onChange }) {
     return (
         <div className = "personalDetails">
-            <h3>Personal details</h3>
             <InputGroup
                 type = "text"
                 id = "fullName"
