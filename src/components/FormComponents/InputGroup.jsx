@@ -1,4 +1,4 @@
-import '../styles/InputGroup.css'
+import '../../styles/InputGroup.css'
 
 function InputGroup({id, placeholder, type, label, onChange}) {
     return (

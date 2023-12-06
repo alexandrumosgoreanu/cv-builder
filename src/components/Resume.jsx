@@ -1,8 +1,12 @@
 import '../styles/Resume.css'
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import PersonalInfoSection from './ResumeComponents/PersonalInfoSection';
+import EducationInfoSection from './ResumeComponents/EducationInfoSection';
 
-function Resume({fullName, email, phoneNumber, address}) {
+function Resume({personalDetails, educationDetails}) {
+    const {fullName, email, phoneNumber, address} = personalDetails;
+    const {degree, university, location, startDate, endDate} = educationDetails;
+
     return (
         <div className="resume">
             <PersonalInfoSection
@@ -11,9 +15,13 @@ function Resume({fullName, email, phoneNumber, address}) {
                 phoneNumber={phoneNumber}
                 address={address}
             />
-            <div className="educationInfo">
-
-            </div>
+            <EducationInfoSection
+                degree={degree}
+                university={university}
+                location={location}
+                startDate={startDate}
+                endDate={endDate}
+            />          
         </div>
     )
 }

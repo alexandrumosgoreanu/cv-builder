@@ -1,3 +1,6 @@
+.personalInfo {
+    margin-bottom: 25px;
+}
 .contactInfo {
     display: flex;
     justify-content: space-around;

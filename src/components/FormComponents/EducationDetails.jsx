@@ -19,7 +19,7 @@ function EducationDetails({ onChange }) {
             />
             <InputGroup
                 type = "text"
-                id = "Location"
+                id = "location"
                 label = "Location"
                 placeholder= "City, Country"
                 onChange={onChange}
