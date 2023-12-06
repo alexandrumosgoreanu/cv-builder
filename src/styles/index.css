@@ -5,8 +5,10 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  --main-bg-color: #ebebeb;
-  --button-color: #B1C381;
+  --main-bg-color: #575A5E;
+  --light-gray: #F4F7F5;
+  --rose-quarts: #A7A2A9;
+  --black: #08090A;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
