@@ -3,9 +3,11 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import PersonalInfoSection from './ResumeComponents/PersonalInfoSection';
 import EducationInfoSection from './ResumeComponents/EducationInfoSection';
 
+// personalDetails = object
+// educationDetails = array of objects
+
 const Resume = ({personalDetails, educationDetails}) => {
     const {fullName, email, phoneNumber, address} = personalDetails;
-    const {degree, university, location, startDate, endDate} = educationDetails;
 
     return (
         <div className="resume">
@@ -15,13 +17,18 @@ const Resume = ({personalDetails, educationDetails}) => {
                 phoneNumber={phoneNumber}
                 address={address}
             />
-            <EducationInfoSection
-                degree={degree}
-                university={university}
-                location={location}
-                startDate={startDate}
-                endDate={endDate}
-            />          
+            
+            {educationDetails.length > 1 ? <h3>Education</h3> : null}
+            {educationDetails.map((item) => (       // iterating over educationDetails array
+                <EducationInfoSection
+                    key={item.key}
+                    degree={item.degree}
+                    university={item.university}
+                    location={item.location}
+                    startDate={item.startDate}
+                    endDate={item.endDate}
+                />
+            ))}           
         </div>
     )
 }

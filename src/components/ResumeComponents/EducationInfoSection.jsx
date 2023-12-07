@@ -3,7 +3,6 @@ import '../../styles/EducationInfoSection.css'
 const EducationInfoSection = ({ degree, university, location, startDate, endDate }) => {
     return (
         <div className="educationInfo">
-            <h3>Education</h3>
             <div className="educationInfoSection">
                 <div className="left">
                     <div className="dates">
