@@ -5,7 +5,8 @@ import Header from './components/Header.jsx'
 import PersonalDetails from './components/FormComponents/PersonalDetails.jsx'
 import Resume from './components/Resume.jsx'
 import EducationDetails from './components/FormComponents/EducationDetails.jsx'
-function App(){
+
+const App = () => {
     const [personalDetails, setPersonalDetails] = useState({
                                                               fullName: "Alexandru Mosgoreanu",
                                                               email: "amosgoreanu@gmail.com",

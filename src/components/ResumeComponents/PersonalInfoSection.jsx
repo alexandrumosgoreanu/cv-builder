@@ -1,6 +1,6 @@
 import '../../styles/PersonalInfoSection.css'
 
-function PersonalInfoSection({ fullName, email, phoneNumber, address}) {
+const PersonalInfoSection = ({ fullName, email, phoneNumber, address}) => {
 
     return(
         <div className="personalInfo">

@@ -1,6 +1,6 @@
 import '../../styles/EducationInfoSection.css'
 
-function EducationInfoSection({ degree, university, location, startDate, endDate }) {
+const EducationInfoSection = ({ degree, university, location, startDate, endDate }) => {
     return (
         <div className="educationInfo">
             <h3>Education</h3>

@@ -1,6 +1,6 @@
 import InputGroup from "./InputGroup";
 
-function EducationDetails({ onChange }) {
+const EducationDetails = ({ onChange }) => {
     return(
         <div className="educationDetails">
              <InputGroup

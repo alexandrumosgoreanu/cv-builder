@@ -1,6 +1,6 @@
 import '../../styles/InputGroup.css'
 
-function InputGroup({id, placeholder, type, label, onChange}) {
+const InputGroup = ({id, placeholder, type, label, onChange}) => {
     return (
         <div className="inputGroup">
             <label htmlFor={id}>{label}</label>

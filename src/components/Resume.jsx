@@ -3,7 +3,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import PersonalInfoSection from './ResumeComponents/PersonalInfoSection';
 import EducationInfoSection from './ResumeComponents/EducationInfoSection';
 
-function Resume({personalDetails, educationDetails}) {
+const Resume = ({personalDetails, educationDetails}) => {
     const {fullName, email, phoneNumber, address} = personalDetails;
     const {degree, university, location, startDate, endDate} = educationDetails;
 
