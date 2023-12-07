@@ -23,19 +23,20 @@ const EducationDetails = ({ onChange }) => {
                 label = "Location"
                 placeholder= "City, Country"
                 onChange={onChange}
+                optional
             />
             <InputGroup
-                type = "text"
+                type = "month"
                 id = "startDate"
                 label = "Start Date"
                 placeholder= "Month, year"
                 onChange={onChange}
             />
             <InputGroup
-                type = "text"
+                type = "month"
                 id = "endDate"
                 label = "End Date"
-                placeholder= "Month, year"
+                placeholder= "mm/yyyy"
                 onChange={onChange}
             />
         </div>

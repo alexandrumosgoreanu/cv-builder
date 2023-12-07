@@ -5,13 +5,18 @@ const EducationInfoSection = ({ degree, university, location, startDate, endDate
         <div className="educationInfo">
             <h3>Education</h3>
             <div className="educationInfoSection">
-                <div className="dates">
-                    <p>
-                        {startDate}
-                        {startDate && endDate ? <span> – </span> : null}
-                        {endDate}
-                    </p>
+                <div className="left">
+                    <div className="dates">
+                        <p>
+                            {startDate.split('-').reverse().join('/')}
+                            {startDate && endDate ? <span> – </span> : null}
+                            {endDate.split('-').reverse().join('/')}
+                        </p>
+                        
+                    </div>
+                <div>
                     <p>{location}</p>
+                </div>
                 </div>
                 <div className="university">
                     <p><strong>{university}</strong></p>

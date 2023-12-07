@@ -1,9 +1,12 @@
 import '../../styles/InputGroup.css'
 
-const InputGroup = ({id, placeholder, type, label, onChange}) => {
+const InputGroup = ({id, placeholder, type, label, onChange, optional}) => {
     return (
         <div className="inputGroup">
-            <label htmlFor={id}>{label}</label>
+            <label htmlFor={id}>
+                <span className="label-text">{label}</span>
+                {optional ? <span className="optional-text">optional</span> : null}
+            </label>
             <input
                 type = {type}
                 id = {id}

@@ -5,7 +5,15 @@
 
 .educationInfoSection {
     display: flex;
-
+    margin-top: 10px;;
+}
+.left {
+    width: 20%;
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .dates {
@@ -13,11 +21,10 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 20%;
-    font-size: 0.8rem;
 }
 
 .university {
+    padding-left: 1rem;;
     text-align: left;
     font-size: 1rem;
 }
