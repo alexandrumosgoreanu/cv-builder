@@ -1,10 +1,11 @@
 .personalInfo {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
+    padding: 0.5rem;
 }
 .contactInfo {
     display: flex;
     justify-content: space-around;
-    gap: 16px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 

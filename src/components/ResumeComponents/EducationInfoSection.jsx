@@ -1,15 +1,24 @@
-function EducationInfoSection({degree, university, location, startDate, endDate}) {
+import '../../styles/EducationInfoSection.css'
+
+function EducationInfoSection({ degree, university, location, startDate, endDate }) {
     return (
         <div className="educationInfo">
-            <h4 className="education">Education</h4>
-            <p>{degree}</p>
-            <p>{university}</p>
-            <p>{location}</p>
-            <p>
-                {startDate}
-                {startDate && endDate ? <span> – </span> : null}
-                {endDate}
-            </p>
+            <h3>Education</h3>
+            <div className="educationInfoSection">
+                <div className="dates">
+                    <p>
+                        {startDate}
+                        {startDate && endDate ? <span> – </span> : null}
+                        {endDate}
+                    </p>
+                    <p>{location}</p>
+                </div>
+                <div className="university">
+                    <p><strong>{university}</strong></p>
+                    <p>{degree}</p>
+                </div>
+            </div>
+            
         </div>
     )
 }

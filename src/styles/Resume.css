@@ -1,12 +1,12 @@
 .resume {
     background-color: white;
-    padding: 2rem;
+    /* padding:1rem; */
     width: clamp(400px, 60vw, 1000px);
     flex-grow: 2;
 }
 
 .resumeName {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 5px;
     font-size: 2rem;
 }

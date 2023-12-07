@@ -1,0 +1,23 @@
+.educationInfo {
+    border-top: 2px solid black;;
+    padding-top: 5px;
+}
+
+.educationInfoSection {
+    display: flex;
+
+}
+
+.dates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 20%;
+    font-size: 0.8rem;
+}
+
+.university {
+    text-align: left;
+    font-size: 1rem;
+}
