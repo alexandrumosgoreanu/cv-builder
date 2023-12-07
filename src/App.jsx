@@ -25,14 +25,20 @@ const App = () => {
                                                                   startDate: "",
                                                                   endDate: ""
                                                               });
-    function handlePersonalDetailsChange(e) {
+    const handlePersonalDetailsChange = (e) => {
         const id = e.target.id;
         setPersonalDetails({...personalDetails, [id]: e.target.value}); //update the state with the latest input
     }
     
-    function handleEducationDetailsChange(e) {
+    const handleEducationDetailsChange = (e) => {
         const id = e.target.id;
         setEducationDetails({...educationDetails, [id]: e.target.value});
+    }
+
+    const toggleSectionClose = (e) => {
+        const toggleElems = e.target.parentElement.querySelectorAll(".toggle");
+        console.log(toggleElems)
+        toggleElems.forEach((elem) => elem.classList.toggle("closed"));
     }
 
     return (
@@ -40,11 +46,39 @@ const App = () => {
           <Header />
           <div className="app">  
               <form className="leftSidebar" action="">
-                <h2>Personal details</h2>
-                <PersonalDetails onChange={handlePersonalDetailsChange}/>
                 
-                <h2>Education</h2>
-                <EducationDetails onChange={handleEducationDetailsChange}/>
+                <div className="personalDetailsInputs container">
+                    <button className="expandInputs" type="button" onClick={toggleSectionClose}>
+                        <h2 className="inputContainerHeader">
+                            <i className="fa-user fa-solid"/>
+                            Personal details
+                        </h2>
+                        <i className="fa-solid fa-chevron-up chevron toggle closed"></i>
+                    </button>
+                    <div className="toggle closed">
+                        <PersonalDetails onChange={handlePersonalDetailsChange}/>
+                    </div>
+                </div>
+                
+                <div className="educationDetailsInputs container">
+                    <button className="expandInputs" type="button" onClick={toggleSectionClose}>
+                        <h2 className="inputContainerHeader">
+                            <i className="fa-graduation-cap fa-solid"/>
+                            Education
+                        </h2>
+                        <i className="fa-solid fa-chevron-up chevron toggle closed"></i>
+                    </button>
+                    <button className="add-education" type="button">
+                        <h4>
+                            <i className="fa-solid fa-plus" />
+                            Education
+                        </h4>
+                    </button>
+                    <div className="toggle closed">
+                        <EducationDetails onChange={handleEducationDetailsChange}/>
+                    </div>
+                </div>
+                
               </form>
               <Resume {...{personalDetails, educationDetails}} />
           </div>

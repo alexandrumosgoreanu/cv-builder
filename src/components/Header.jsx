@@ -5,8 +5,8 @@ const Header = () => {
         <div className="header">
             <h1>CV Builder</h1>
             <div className="buttonSection">
-                <button>Load Example</button>
-                <button>Save PDF</button>
+                <button className="headerButtons">Load Example</button>
+                <button className="headerButtons">Save PDF</button>
             </div>
         </div>
     )

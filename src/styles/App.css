@@ -19,13 +19,55 @@
 
 .leftSidebar {
   width: 25vw;
-  background-color: var(--light-gray);
+ 
   color: var(--black);
   border-radius: 10px;
 }
 
 form {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin-bottom: 2rem;
+  background-color: var(--light-gray);
+  border-radius: 0.5rem;
+}
+.expandInputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.inputContainerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.closed {
+  display: none;
+}
+
+.chevron {
+  transition: transform 0.3s ease-out;
+}
+
+.chevron.closed {
+  transform: rotate(180deg);
+}
+
+.add-education {
+  background-color: transparent;
+  padding: 4px 8px;
+  border-radius: 10px;
+  border: 4px solid rgb(238, 240, 244);
 }
 /* @keyframes logo-spin {
   from {

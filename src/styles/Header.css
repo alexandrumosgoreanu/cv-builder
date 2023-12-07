@@ -19,23 +19,23 @@ h1 {
     /* box-shadow: 24px 22px 62px 3px rgba(0,0,0,0.52); */
 }
 
-button {
+.headerButtons {
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: var(--button-color);
+    background-color: var(--light-gray);
     cursor: pointer;
     transition: ease-in-out 0.1s;
 }
-  
-button:hover {
+
+.headerButtons:hover {
     border-color: #000000;
     transform: scale(1.05);
 }
 
-button:active{
+.headerButtons:active{
     transform: scale(0.95);
 }

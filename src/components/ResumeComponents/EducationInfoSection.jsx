@@ -20,7 +20,7 @@ const EducationInfoSection = ({ degree, university, location, startDate, endDate
                 </div>
                 <div className="university">
                     <p><strong>{university}</strong></p>
-                    <p>{degree}</p>
+                    <p className="degree">{degree}</p>
                 </div>
             </div>
             
