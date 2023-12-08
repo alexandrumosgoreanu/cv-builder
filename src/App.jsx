@@ -51,7 +51,8 @@ const App = () => {
             university: "",
             location: "",
             startDate: "",
-            endDate: ""
+            endDate: "",
+            isCollapsed: false
         };
 
         setEducationDetails([...educationDetails, newItem]);
@@ -62,6 +63,17 @@ const App = () => {
         setEducationDetails(nextEducation);
     };
 
+    const saveEducationItem = (e, key) => {
+        const nextEducation = educationDetails.map((item) => {
+            if(item.key === key)
+            {   item.isCollapsed = true;
+                console.log(item);
+            }
+            return item;
+        });
+
+        setEducationDetails(nextEducation);
+    }
 
     return (
       <>
@@ -80,6 +92,7 @@ const App = () => {
                         handleEducationDetailsChange={handleEducationDetailsChange}
                         removeEducation={removeEducation}
                         createNewEducation={createNewEducation}
+                        saveEducationItem={saveEducationItem}
                     />
                     
                 </form>
