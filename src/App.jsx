@@ -4,7 +4,7 @@ import './styles/App.css'
 import { v4 as uuidv4 } from 'uuid'
 import Header from './components/Header.jsx'
 import Resume from './components/Resume.jsx'
-import EducationForms from './components/FormComponents/EducationForms.jsx'
+import EducationInputSection from './components/FormComponents/EducationInputSection.jsx'
 import PersonalInputSection from './components/FormComponents/PersonalInputSection.jsx'
 
 const App = () => {
@@ -74,31 +74,14 @@ const App = () => {
                         handlePersonalDetailsChange={handlePersonalDetailsChange}
                     />
                     
-                    <div className="educationDetailsInputs container">
-                        <button className="expandInputs" type="button" onClick={(e) => {
-                            document.querySelector(".educationDetailsForm").classList.toggle("closed");
-                            toggleElems(e)}}>
-                            <h2 className="inputContainerHeader">
-                                <i className="fa-graduation-cap fa-solid"/>
-                                Education
-                            </h2>
-                            <i className="fa-solid fa-chevron-up chevron toggle closed"></i>
-                        </button>
-                        
-                        <div className="educationDetailsForm closed">
-                            <EducationForms
-                                educations={educationDetails}
-                                onChange={handleEducationDetailsChange}
-                                cancel={removeEducation}
-                            />
-                            <button className="addEducation" type="button" onClick={createNewEducation}>
-                                <h4>
-                                    <i className="fa-solid fa-plus" />
-                                    Education
-                                </h4>
-                            </button> 
-                        </div>
-                    </div>
+                    <EducationInputSection
+                        educationDetails={educationDetails}
+                        toggleElems={toggleElems}
+                        handleEducationDetailsChange={handleEducationDetailsChange}
+                        removeEducation={removeEducation}
+                        createNewEducation={createNewEducation}
+                    />
+                    
                 </form>
 
                 <Resume 
