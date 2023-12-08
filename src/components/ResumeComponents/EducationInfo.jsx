@@ -1,8 +1,7 @@
-import '../../styles/EducationInfoSection.css'
+import '../../styles/EducationInfo.css'
 
-const EducationInfoSection = ({ degree, university, location, startDate, endDate }) => {
+const EducationInfo = ({ degree, university, location, startDate, endDate }) => {
     return (
-        <div className="educationInfo">
             <div className="educationInfoSection">
                 <div className="left">
                     <div className="dates">
@@ -22,9 +21,7 @@ const EducationInfoSection = ({ degree, university, location, startDate, endDate
                     <p className="degree">{degree}</p>
                 </div>
             </div>
-            
-        </div>
     )
 }
 
-export default EducationInfoSection;
+export default EducationInfo;

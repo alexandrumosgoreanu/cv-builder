@@ -1,7 +1,7 @@
 import '../styles/Resume.css'
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import PersonalInfoSection from './ResumeComponents/PersonalInfoSection';
-import EducationInfoSection from './ResumeComponents/EducationInfoSection';
+import EducationInfoSection from './ResumeComponents/EducationInfo';
 
 // personalDetails = object
 // educationDetails = array of objects
