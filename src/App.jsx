@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid'
 import Header from './components/Header.jsx'
 import PersonalDetails from './components/FormComponents/PersonalDetails.jsx'
 import Resume from './components/Resume.jsx'
-import EducationDetails from './components/FormComponents/EducationDetails.jsx'
+import EducationForms from './components/FormComponents/EducationForms.jsx'
 
 const App = () => {
     const [personalDetails, setPersonalDetails] = useState({
@@ -92,23 +92,27 @@ const App = () => {
                         </button>
                         
                         <div className="educationDetails toggle closed">
-                            {/* <EducationDetails onChange={handleEducationDetailsChange}/> */}
+                            {/* <EducationDetails onChange={handleEducationDetailsChange}/> }
                             {educationDetails.map((item) => (  
                                 <EducationDetails
                                     key={item.key}
                                     onChange={(e) => handleEducationDetailsChange(e, item.key)}
                                 />
-                            ))}
+                            ))}*/}
+                            <EducationForms
+                                educations={educationDetails}
+                                onChange={handleEducationDetailsChange}
+                            />
                             <button className="addEducation" type="button" onClick={createNewEducation}>
                                 <h4>
                                     <i className="fa-solid fa-plus" />
                                     Education
                                 </h4>
-                            </button>
+                            </button> 
                         </div>
                     </div>
-                    
                 </form>
+
                 <Resume 
                         personalDetails={personalDetails}
                         educationDetails= {educationDetails}
