@@ -63,12 +63,11 @@ const App = () => {
         setEducationDetails(nextEducation);
     };
 
-    const saveEducationItem = (e, key) => {
+    const toggleFormOpen = (e, key) => {
+        console.log(educationDetails)
         const nextEducation = educationDetails.map((item) => {
             if(item.key === key)
-            {   item.isCollapsed = true;
-                console.log(item);
-            }
+                item.isCollapsed = !item.isCollapsed;
             return item;
         });
 
@@ -92,7 +91,7 @@ const App = () => {
                         handleEducationDetailsChange={handleEducationDetailsChange}
                         removeEducation={removeEducation}
                         createNewEducation={createNewEducation}
-                        saveEducationItem={saveEducationItem}
+                        toggleFormOpen={toggleFormOpen}
                     />
                     
                 </form>

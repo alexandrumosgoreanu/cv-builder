@@ -1,15 +1,16 @@
 import InputGroup from "./InputGroup";
 import '../../styles/EducationItem.css'
 
-const EducationItem = ({ onChange, cancel, save }) => {
+const EducationItem = ({ education, onChange, cancel, save }) => {
     return(
         <div className="educationItem">
              <InputGroup
-                type = "text"
-                id = "degree"
-                label = "Degree"
-                placeholder= "Enter Degree/Field of Study"
+                type="text"
+                id="degree"
+                label="Degree"
+                placeholder="Enter Degree/Field of Study"
                 onChange={onChange}
+                value={education.degree ? education.degree : null}
             />
             <InputGroup
                 type = "text"
@@ -17,6 +18,7 @@ const EducationItem = ({ onChange, cancel, save }) => {
                 label = "University"
                 placeholder= "Enter school/university"
                 onChange={onChange}
+                value={education.university ? education.university : null}
             />
             <InputGroup
                 type = "text"
@@ -24,6 +26,7 @@ const EducationItem = ({ onChange, cancel, save }) => {
                 label = "Location"
                 placeholder= "City, Country"
                 onChange={onChange}
+                value={education.location ? education.location : null}
                 optional
             />
             <InputGroup
@@ -32,6 +35,7 @@ const EducationItem = ({ onChange, cancel, save }) => {
                 label = "Start Date"
                 placeholder= "Month, year"
                 onChange={onChange}
+                value={education.startDate ? education.startDate : null}
             />
             <InputGroup
                 type = "month"
@@ -39,6 +43,7 @@ const EducationItem = ({ onChange, cancel, save }) => {
                 label = "End Date"
                 placeholder= "mm/yyyy"
                 onChange={onChange}
+                value={education.endDate ? education.endDate : null}
             />
             <div className="educationItemButtons">
                 <button className="cancel" onClick={cancel}>

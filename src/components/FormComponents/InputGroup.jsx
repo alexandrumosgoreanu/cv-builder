@@ -1,6 +1,6 @@
 import '../../styles/InputGroup.css'
 
-const InputGroup = ({id, placeholder, type, label, onChange, optional}) => {
+const InputGroup = ({id, placeholder, type, label, onChange, optional, value}) => {
     return (
         <div className="inputGroup">
             <label htmlFor={id}>
@@ -11,7 +11,8 @@ const InputGroup = ({id, placeholder, type, label, onChange, optional}) => {
                 type = {type}
                 id = {id}
                 placeholder = {placeholder}
-                onChange = {onChange} 
+                onChange = {onChange}
+                value={value} 
             />
         </div>
     );

@@ -1,3 +1,8 @@
 .educationForms.collapsed {
     display: none;
-  }
+}
+
+.educationForms {
+  display: flex;
+  flex-direction: column;
+}
