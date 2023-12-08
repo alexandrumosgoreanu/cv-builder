@@ -1,8 +1,9 @@
 import InputGroup from "./InputGroup";
+import '../../styles/EducationItem.css'
 
-const EducationDetails = ({ onChange }) => {
+const EducationItem = ({ onChange, cancel, save }) => {
     return(
-        <div className="educationDetails">
+        <div className="educationItem">
              <InputGroup
                 type = "text"
                 id = "degree"
@@ -39,8 +40,16 @@ const EducationDetails = ({ onChange }) => {
                 placeholder= "mm/yyyy"
                 onChange={onChange}
             />
+            <div className="educationItemButtons">
+                <button className="cancel" onClick={cancel}>
+                    Cancel
+                </button>
+                <button className="save" onClick={save}>
+                    Save
+                </button>
+            </div>
         </div>
     )
 }
 
-export default EducationDetails;
+export default EducationItem;

@@ -35,6 +35,7 @@ form {
   background-color: var(--light-gray);
   border-radius: 0.5rem;
 }
+
 .expandInputs {
   display: flex;
   align-items: center;

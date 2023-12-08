@@ -1,0 +1,24 @@
+.educationItemButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cancel,
+.save {
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: none;
+    flex-grow: 1;
+    max-width: 100px;
+    color: white;
+    outline: 1px solid grey;
+}
+.cancel {
+    background-color: rgb(207, 62, 62);
+}
+
+.save {
+    background-color: rgb(0, 124, 17);
+}
