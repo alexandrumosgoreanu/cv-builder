@@ -67,7 +67,7 @@ const App = () => {
       <>
             <Header />
             <div className="app">  
-                <form className="leftSidebar" action="" onSubmit={(e) => e.preventDefault()}>
+                <form className="leftSidebar" action="" onSubmit={(e) => e.preventDefault()} noValidate>
                     
                     <div className="personalDetailsInputs container">
                         <button className="expandInputs" type="button" onClick={(e) => {
