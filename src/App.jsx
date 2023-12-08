@@ -3,9 +3,9 @@ import { useState } from 'react'
 import './styles/App.css'
 import { v4 as uuidv4 } from 'uuid'
 import Header from './components/Header.jsx'
-import PersonalDetails from './components/FormComponents/PersonalDetails.jsx'
 import Resume from './components/Resume.jsx'
 import EducationForms from './components/FormComponents/EducationForms.jsx'
+import PersonalInputSection from './components/FormComponents/PersonalInputSection.jsx'
 
 const App = () => {
     const [personalDetails, setPersonalDetails] = useState({
@@ -24,7 +24,7 @@ const App = () => {
     const handlePersonalDetailsChange = (e) => {
         const id = e.target.id;
         setPersonalDetails({...personalDetails, [id]: e.target.value}); //update the state with the latest input
-    }
+    };
     
     const handleEducationDetailsChange = (e, key) => {
         const id = e.target.id;
@@ -37,13 +37,12 @@ const App = () => {
         });
 
         setEducationDetails(nextEducation);
-    }
+    };
 
     const toggleElems = (e) => {
         const toggleElems = e.target.parentElement.querySelectorAll(".toggle");
-        //console.log(e.target.classList)
         toggleElems.forEach((elem) => elem.classList.toggle("closed"));
-    }
+    };
 
     const createNewEducation = () => {
         const newItem = {
@@ -53,14 +52,15 @@ const App = () => {
             location: "",
             startDate: "",
             endDate: ""
-        }
+        };
+
         setEducationDetails([...educationDetails, newItem]);
-    }
+    };
 
     const removeEducation = (e, key) => {
         const nextEducation = educationDetails.filter(item => item.key !== key);
         setEducationDetails(nextEducation);
-    }
+    };
 
 
     return (
@@ -69,22 +69,10 @@ const App = () => {
             <div className="app">  
                 <form className="leftSidebar" action="" onSubmit={(e) => e.preventDefault()} noValidate>
                     
-                    <div className="personalDetailsInputs container">
-                        <button className="expandInputs" type="button" onClick={(e) => {
-                            document.querySelector(".personalDetailsForm").classList.toggle("closed");
-                            toggleElems(e);
-                            }}>
-                            <h2 className="inputContainerHeader">
-                                <i className="fa-user fa-solid"/>
-                                Personal details
-                            </h2>
-                            <i className="fa-solid fa-chevron-up chevron toggle closed"></i>
-                        </button>
-
-                        <div className="personalDetailsForm closed">
-                            <PersonalDetails onChange={handlePersonalDetailsChange}/>
-                        </div>
-                    </div>
+                    <PersonalInputSection
+                        toggleElems={toggleElems}
+                        handlePersonalDetailsChange={handlePersonalDetailsChange}
+                    />
                     
                     <div className="educationDetailsInputs container">
                         <button className="expandInputs" type="button" onClick={(e) => {
@@ -121,6 +109,6 @@ const App = () => {
       </>
         
     )
-}
+};
 
 export default App;
