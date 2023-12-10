@@ -6,16 +6,17 @@ const EducationInfoSection = ({ educationDetails }) => {
         <div className="educationInfoSection">
             <h3>Education</h3>
             {console.log(educationDetails)}
-            {educationDetails.map((item) => (       // iterating over educationDetails array
-                    <EducationInfo
-                        key={item.key}
-                        degree={item.degree}
-                        university={item.university}
-                        location={item.location}
-                        startDate={item.startDate}
-                        endDate={item.endDate}
-                    />
-            ))}
+            {educationDetails.map((item) =>  item.isHidden ? null :
+                (       
+                <EducationInfo
+                    key={item.key}
+                    degree={item.degree}
+                    university={item.university}
+                    location={item.location}
+                    startDate={item.startDate}
+                    endDate={item.endDate}
+                />
+                ))}          
         </div>
     )
 }

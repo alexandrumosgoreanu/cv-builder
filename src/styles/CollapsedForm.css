@@ -4,6 +4,7 @@
   justify-content: space-between;
   border-top: 5px solid var(--main-bg-color);
   height: 40px;
+  gap: 10px;
 }
 
 .titleButton {
@@ -23,8 +24,28 @@
 }
 
 .deleteButton {
+  height: 1rem;
+  font-size: 1rem;
   border: 0px;
   color: rgb(153, 2, 2);
-  margin-right: 20px;
+  margin-right: 10px;
   cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.deleteButton:hover {
+  transform: scale(1.05);
+}
+
+.eye {
+  height: 1rem;
+  font-size: 1rem;
+  border: 0px;
+  cursor: pointer;
+  color: rgb(112, 112, 112);
+  transition: 0.2s;
+}
+
+.eye:hover {
+  color: black;
 }

@@ -47,7 +47,8 @@ const App = () => {
             location: "",
             startDate: "",
             endDate: "",
-            isCollapsed: false
+            isCollapsed: false,
+            isHidden: false
         };
 
         setEducationDetails([...educationDetails, newItem]);
@@ -58,16 +59,18 @@ const App = () => {
         setEducationDetails(nextEducation);
     };
 
-    const toggleFormOpen = (e, key) => {
+    const toggleItem = (e, key,  attr) => {
         const nextEducation = educationDetails.map((item) => {
             if(item.key === key)
-                item.isCollapsed = !item.isCollapsed;
+                item[attr] = !item[attr];
             return item;
         });
 
-
         setEducationDetails(nextEducation);
     }
+
+    const toggleFormCollapsed = (e, key) => toggleItem(e, key, 'isCollapsed');
+    const toggleEducationItemHidden = (e, key) => toggleItem(e, key, 'isHidden');
 
     return (
       <>
@@ -86,7 +89,8 @@ const App = () => {
                         handleEducationDetailsChange={handleEducationDetailsChange}
                         removeEducationItem={removeEducationItem}
                         createEducationItem={createEducationItem}
-                        toggleFormOpen={toggleFormOpen}
+                        toggleFormCollapsed={toggleFormCollapsed}
+                        toggleEducationItemHidden={toggleEducationItemHidden}
                     />
                     
                 </form>
