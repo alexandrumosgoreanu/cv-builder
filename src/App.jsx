@@ -15,6 +15,7 @@ const App = () => {
                                                               address: "Bucharest, Romania"
                                                           });
     const [educationDetails, setEducationDetails] = useState([]);
+    const [backupEducationDetails, setEducationBackup] = useState([]);
 
     const handlePersonalDetailsChange = (e) => {
         const id = e.target.id;
@@ -59,6 +60,22 @@ const App = () => {
         setEducationDetails(nextEducation);
     };
 
+    const cancelForm = (e, key) => {
+        console.log(educationDetails)
+        const nextEducation = backupEducationDetails.map((item) => {
+            if(item.key === key)
+                item.isCollapsed = true;
+            return item;
+        });
+
+        setEducationDetails(nextEducation);
+    }
+
+    const saveForm = (e, key) => {
+        toggleFormCollapsed(e, key);
+        setEducationBackup(educationDetails);
+    }
+
     const toggleItem = (e, key,  attr) => {
         const nextEducation = educationDetails.map((item) => {
             if(item.key === key)
@@ -70,7 +87,7 @@ const App = () => {
     }
 
     const toggleFormCollapsed = (e, key) => toggleItem(e, key, 'isCollapsed');
-    const toggleEducationItemHidden = (e, key) => toggleItem(e, key, 'isHidden');
+    const toggleItemHidden = (e, key) => toggleItem(e, key, 'isHidden');
 
     return (
       <>
@@ -90,7 +107,9 @@ const App = () => {
                         removeEducationItem={removeEducationItem}
                         createEducationItem={createEducationItem}
                         toggleFormCollapsed={toggleFormCollapsed}
-                        toggleEducationItemHidden={toggleEducationItemHidden}
+                        toggleItemHidden={toggleItemHidden}
+                        cancelForm={cancelForm}
+                        saveForm={saveForm}
                     />
                     
                 </form>

@@ -7,7 +7,9 @@ const EducationInputSection = ({
     removeEducationItem, 
     createEducationItem, 
     toggleFormCollapsed,
-    toggleEducationItemHidden }) => {
+    toggleItemHidden,
+    cancelForm,
+    saveForm }) => {
 
     return (
         <div className="educationDetailsInputs container">
@@ -27,7 +29,9 @@ const EducationInputSection = ({
                     onChange={handleEducationDetailsChange}
                     removeEducationItem={removeEducationItem}
                     toggleFormCollapsed={toggleFormCollapsed}
-                    toggleEducationItemHidden={toggleEducationItemHidden}
+                    toggleItemHidden={toggleItemHidden}
+                    cancelForm={cancelForm}
+                    saveForm={saveForm}
                 />
                 <button className="addEducation" type="button" onClick={createEducationItem}>
                     <h4>

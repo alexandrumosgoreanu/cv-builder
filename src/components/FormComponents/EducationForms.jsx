@@ -2,7 +2,7 @@ import EducationItem from "./EducationItem";
 import CollapsedForm from "./CollapsedForm";
 import "../../styles/EducationForms.css"
 
-const EducationForms = ({ educations, onChange, removeEducationItem, toggleFormCollapsed, toggleEducationItemHidden }) => {
+const EducationForms = ({ educations, onChange, removeEducationItem, toggleFormCollapsed, toggleItemHidden, cancelForm, saveForm }) => {
     return (
         <div className="educationForms">
             {educations.map((item) => 
@@ -14,7 +14,7 @@ const EducationForms = ({ educations, onChange, removeEducationItem, toggleFormC
                         title={item.university}
                         removeEducationItem={(e) => removeEducationItem(e, item.key)}
                         isHidden={item.isHidden}
-                        toggleEducationItemHidden={(e) => toggleEducationItemHidden(e, item.key)}
+                        toggleItemHidden={(e) => toggleItemHidden(e, item.key)}
                     />
                 ) : (
                     <EducationItem
@@ -22,7 +22,8 @@ const EducationForms = ({ educations, onChange, removeEducationItem, toggleFormC
                         key={item.key}
                         onChange={(e) => onChange(e, item.key)}
                         removeEducationItem={(e) => removeEducationItem(e, item.key)}
-                        save={(e) => toggleFormCollapsed(e, item.key)}
+                        cancelForm={(e) => cancelForm(e, item.key)}
+                        saveForm={(e) => saveForm(e, item.key)}
                     />
                 )
             )}
