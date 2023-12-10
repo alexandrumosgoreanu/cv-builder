@@ -47,7 +47,7 @@ const EducationItem = ({ education, onChange, cancel, save }) => {
             />
             <div className="educationItemButtons">
                 <button className="cancel" onClick={cancel}>
-                    Cancel
+                    Delete
                 </button>
                 <button className="save" onClick={save}>
                     Save

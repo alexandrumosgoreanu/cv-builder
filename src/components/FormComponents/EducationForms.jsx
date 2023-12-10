@@ -12,6 +12,7 @@ const EducationForms = ({ educations, onChange, cancel, toggleFormOpen }) => {
                         key={item.key}
                         onClick={(e) => toggleFormOpen(e, item.key)}
                         title={item.university}
+                        cancel={(e) => cancel(e, item.key)}
                     />
                 ) : (
                     <EducationItem
