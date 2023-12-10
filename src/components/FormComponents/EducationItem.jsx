@@ -1,7 +1,7 @@
 import InputGroup from "./InputGroup";
 import '../../styles/EducationItem.css'
 
-const EducationItem = ({ education, onChange, cancel, save }) => {
+const EducationItem = ({ education, onChange, removeEducationItem, save }) => {
     return(
         <div className="educationItem">
              <InputGroup
@@ -46,7 +46,7 @@ const EducationItem = ({ education, onChange, cancel, save }) => {
                 value={education.endDate ? education.endDate : null}
             />
             <div className="educationItemButtons">
-                <button className="cancel" onClick={cancel}>
+                <button className="cancel" onClick={removeEducationItem}>
                     Delete
                 </button>
                 <button className="save" onClick={save}>

@@ -13,11 +13,6 @@ const App = () => {
                                                               email: "amosgoreanu@gmail.com",
                                                               phoneNumber: "0755011638",
                                                               address: "Bucharest, Romania"
-                                                              // degree: "",
-                                                              // university: "",
-                                                              // location: "",
-                                                              // startDate: "",
-                                                              // endDate: ""
                                                           });
     const [educationDetails, setEducationDetails] = useState([]);
 
@@ -44,7 +39,7 @@ const App = () => {
         toggleElems.forEach((elem) => elem.classList.toggle("closed"));
     };
 
-    const createNewEducation = () => {
+    const createEducationItem = () => {
         const newItem = {
             key: uuidv4(),
             degree: "",
@@ -58,18 +53,18 @@ const App = () => {
         setEducationDetails([...educationDetails, newItem]);
     };
 
-    const removeEducation = (e, key) => {
+    const removeEducationItem = (e, key) => {
         const nextEducation = educationDetails.filter(item => item.key !== key);
         setEducationDetails(nextEducation);
     };
 
     const toggleFormOpen = (e, key) => {
-        console.log(educationDetails)
         const nextEducation = educationDetails.map((item) => {
             if(item.key === key)
                 item.isCollapsed = !item.isCollapsed;
             return item;
         });
+
 
         setEducationDetails(nextEducation);
     }
@@ -89,8 +84,8 @@ const App = () => {
                         educationDetails={educationDetails}
                         toggleElems={toggleElems}
                         handleEducationDetailsChange={handleEducationDetailsChange}
-                        removeEducation={removeEducation}
-                        createNewEducation={createNewEducation}
+                        removeEducationItem={removeEducationItem}
+                        createEducationItem={createEducationItem}
                         toggleFormOpen={toggleFormOpen}
                     />
                     

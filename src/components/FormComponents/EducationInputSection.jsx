@@ -1,6 +1,6 @@
 import EducationForms from './EducationForms.jsx'
 
-const EducationInputSection = ({ toggleElems, educationDetails, handleEducationDetailsChange, removeEducation, createNewEducation, toggleFormOpen }) => {
+const EducationInputSection = ({ toggleElems, educationDetails, handleEducationDetailsChange, removeEducationItem, createEducationItem, toggleFormOpen }) => {
     return (
         <div className="educationDetailsInputs container">
             <button className="expandInputs" type="button" onClick={(e) => {
@@ -17,10 +17,10 @@ const EducationInputSection = ({ toggleElems, educationDetails, handleEducationD
                 <EducationForms
                     educations={educationDetails}
                     onChange={handleEducationDetailsChange}
-                    cancel={removeEducation}
+                    removeEducationItem={removeEducationItem}
                     toggleFormOpen={toggleFormOpen}
                 />
-                <button className="addEducation" type="button" onClick={createNewEducation}>
+                <button className="addEducation" type="button" onClick={createEducationItem}>
                     <h4>
                         <i className="fa-solid fa-plus" />
                         Education

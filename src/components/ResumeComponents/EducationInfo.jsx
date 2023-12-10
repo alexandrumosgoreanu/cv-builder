@@ -10,7 +10,6 @@ const EducationInfo = ({ degree, university, location, startDate, endDate }) => 
                             {startDate && endDate ? <span> – </span> : null}
                             {endDate.split('-').reverse().join('/')}
                         </p>
-                        
                     </div>
                 <div>
                     <p>{location}</p>
