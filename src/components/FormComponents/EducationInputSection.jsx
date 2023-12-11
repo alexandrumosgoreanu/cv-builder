@@ -1,4 +1,5 @@
 import EducationForms from './EducationForms.jsx'
+import InputSectionHeader from './InputSectionHeader.jsx'
 
 const EducationInputSection = ({ 
     toggleElems, 
@@ -13,16 +14,12 @@ const EducationInputSection = ({
 
     return (
         <div className="educationDetailsInputs container">
-            <button className="expandInputs" type="button" onClick={(e) => {
-                document.querySelector(".educationDetailsForm").classList.toggle("closed");
-                toggleElems(e)}}>
-                <h2 className="inputContainerHeader">
-                    <i className="fa-graduation-cap fa-solid"/>
-                    Education
-                </h2>
-                <i className="fa-solid fa-chevron-up chevron toggle closed"></i>
-            </button>
-                            
+            <InputSectionHeader
+                sectionName="Education"
+                isClosed={true}
+                toggleElems={toggleElems}
+                iconName="fa-graduation-cap fa-solid"
+            />          
             <div className="educationDetailsForm closed">
                 <EducationForms
                     educations={educationDetails}
