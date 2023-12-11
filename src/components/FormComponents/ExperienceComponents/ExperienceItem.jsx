@@ -1,4 +1,4 @@
-import InputGroup from "./InputGroup"
+import InputGroup from "../InputGroup"
 
 const ExperienceItem = ({ experience, onChange, removeExperienceItem, cancelForm, saveForm }) => {
     return (

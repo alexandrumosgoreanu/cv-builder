@@ -1,5 +1,5 @@
-import InputGroup from "./InputGroup";
-import '../../styles/EducationItem.css'
+import InputGroup from "../InputGroup";
+import '../../../styles/EducationItem.css'
 
 const EducationItem = ({ education, onChange, removeEducationItem, cancelForm, saveForm }) => {
     return(

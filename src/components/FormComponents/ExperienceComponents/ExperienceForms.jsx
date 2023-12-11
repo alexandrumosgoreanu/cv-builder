@@ -1,4 +1,4 @@
-import CollapsedForm from "./CollapsedForm";
+import CollapsedForm from "../CollapsedForm";
 import ExperienceItem from "./ExperienceItem";
 
 const ExperienceForms = ({ experiences, onChange, removeExperienceItem, toggleFormCollapsed, toggleItemHidden, cancelForm, saveForm }) => {

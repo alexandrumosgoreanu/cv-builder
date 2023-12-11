@@ -4,9 +4,9 @@ import './styles/App.css'
 import { v4 as uuidv4 } from 'uuid'
 import Header from './components/Header.jsx'
 import Resume from './components/Resume.jsx'
-import EducationInputSection from './components/FormComponents/EducationInputSection.jsx'
-import PersonalInputSection from './components/FormComponents/PersonalInputSection.jsx'
-import ExperienceInputSection from './components/FormComponents/ExperienceInputSection.jsx'
+import EducationInputSection from './components/FormComponents/EducationComponents/EducationInputSection.jsx'
+import PersonalInputSection from './components/FormComponents/PersonalComponents/PersonalInputSection.jsx'
+import ExperienceInputSection from './components/FormComponents/ExperienceComponents/ExperienceInputSection.jsx'
 
 const App = () => {
     const [personalDetails, setPersonalDetails] = useState({

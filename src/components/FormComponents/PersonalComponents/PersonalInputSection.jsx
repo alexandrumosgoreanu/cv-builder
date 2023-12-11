@@ -1,4 +1,4 @@
-import InputSectionHeader from "./InputSectionHeader";
+import InputSectionHeader from "../InputSectionHeader";
 import PersonalDetails from "./PersonalDetails";
 
 const PersonalInputSection = ({toggleElems, handlePersonalDetailsChange}) => {

@@ -1,5 +1,5 @@
-import AddFormItem from "./AddFormItem";
-import InputSectionHeader from "./InputSectionHeader";
+import AddFormItem from "../AddFormItem";
+import InputSectionHeader from "../InputSectionHeader";
 import ExperienceForms from "./ExperienceForms";
 
 const ExperienceInputSection = ({

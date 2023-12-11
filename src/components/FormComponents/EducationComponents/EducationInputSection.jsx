@@ -1,6 +1,6 @@
-import AddFormItem from './AddFormItem.jsx';
+import AddFormItem from '../AddFormItem.jsx';
 import EducationForms from './EducationForms.jsx'
-import InputSectionHeader from './InputSectionHeader.jsx'
+import InputSectionHeader from '../InputSectionHeader.jsx'
 
 const EducationInputSection = ({ 
     toggleElems, 
