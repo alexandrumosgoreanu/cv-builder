@@ -11,15 +11,18 @@ const ExperienceInputSection = ({
     toggleItemHidden,
     toggleElems,
     cancelForm,
-    saveForm
+    saveForm,
+    sectionOpen,
+    setOpen
  }) => {
     return (
        <div className="formContainer">
             <InputSectionHeader
                 sectionName="Experience"
-                isClosed={true}
+                isClosed={sectionOpen === "Experience"}
                 toggleElems={toggleElems}
                 iconName="fa-solid fa-briefcase"
+                setOpen={setOpen}
             />
             <div className="experienceDetailsForm closed">
                 <ExperienceForms

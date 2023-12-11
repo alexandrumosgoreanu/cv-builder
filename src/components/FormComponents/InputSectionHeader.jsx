@@ -1,21 +1,29 @@
 import '../../styles/InputSectionHeader.css'
 
-const InputSectionHeader = ( {sectionName, isClosed, toggleElems, iconName} ) => {
+const InputSectionHeader = ({ sectionName, isClosed, toggleElems, iconName, setOpen }) => {
     return (
         <button className="expandInputs" type="button" onClick={(e) => {
-            let formClassName="";
+            let formClassName = "";
+            let closingFormName = [".personalDetailsForm", ".educationDetailsForm", ".experienceDetailsForm"];
             switch(sectionName) {
                 case "Personal details" : 
-                    formClassName=".personalDetailsForm";
+                    formClassName = ".personalDetailsForm";
+                    closingFormName = [".educationDetailsForm", ".experienceDetailsForm"];
                     break;
                 case "Education" : 
                     formClassName = ".educationDetailsForm";
+                    closingFormName = [".personalDetailsForm", ".experienceDetailsForm"];
                     break;
-                case "Experience" : formClassName = ".experienceDetailsForm";
+                case "Experience" : 
+                    formClassName = ".experienceDetailsForm";
+                    closingFormName = [".personalDetailsForm", ".educationDetailsForm"];
             }   
 
             document.querySelector(formClassName).classList.toggle("closed");
-            toggleElems(e)}}>
+            closingFormName.forEach(item => document.querySelector(item).classList.add("closed"));
+            toggleElems(e);
+            setOpen(sectionName);
+            }}>
             <h2 className="inputContainerHeader">
                 <i className={`${iconName}`}/>
                 {sectionName}

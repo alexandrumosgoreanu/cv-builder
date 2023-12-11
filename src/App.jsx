@@ -19,7 +19,9 @@ const App = () => {
     const [backupEducationDetails, setEducationBackup] = useState([]);
     const [experienceDetails, setExperienceDetails] = useState([]);
     const [backupExperienceDetails, setExperienceBackup] = useState([]);
+    const [sectionOpen, setSectionOpen] = useState("personal");                                                  
 
+    const setOpen = (sectioName) => setSectionOpen(sectioName);
 
     const handlePersonalDetailsChange = (e) => {
         const id = e.target.id;
@@ -165,6 +167,8 @@ const App = () => {
                     <PersonalInputSection
                         toggleElems={toggleElems}
                         handlePersonalDetailsChange={handlePersonalDetailsChange}
+                        sectionOpen={sectionOpen}
+                        setOpen={setOpen}
                     />
                     
                     <EducationInputSection
@@ -177,6 +181,8 @@ const App = () => {
                         toggleItemHidden={toggleEducationItemHidden}
                         cancelForm={cancelEducationForm}
                         saveForm={saveEducationForm}
+                        sectionOpen={sectionOpen}
+                        setOpen={setOpen}
                     />
                     
                     <ExperienceInputSection
@@ -189,6 +195,8 @@ const App = () => {
                         toggleItemHidden={toggleExperienceItemHidden} //TODO
                         cancelForm={cancelExperienceForm} 
                         saveForm={saveExperienceForm}
+                        sectionOpen={sectionOpen}
+                        setOpen={setOpen}
                     />
                 </form>
 

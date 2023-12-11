@@ -11,15 +11,19 @@ const EducationInputSection = ({
     toggleFormCollapsed,
     toggleItemHidden,
     cancelForm,
-    saveForm }) => {
+    saveForm,
+    sectionOpen,
+    setOpen,
+ }) => {
 
     return (
         <div className="formContainer">
             <InputSectionHeader
                 sectionName="Education"
-                isClosed={true}
+                isClosed={sectionOpen === "Education"}
                 toggleElems={toggleElems}
                 iconName="fa-graduation-cap fa-solid"
+                setOpen={setOpen}
             />          
             <div className="educationDetailsForm closed">
                 <EducationForms
