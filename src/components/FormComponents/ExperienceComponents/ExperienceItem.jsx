@@ -44,8 +44,8 @@ const ExperienceItem = ({ experience, onChange, removeExperienceItem, cancelForm
                 onChange={onChange}
                 value={experience.endDate || null}
             />
-            <InputGroup
-                type="text"
+            {console.log(experience.description)}
+            <textarea
                 id="description"
                 label="Description"
                 placeholder="Enter description"

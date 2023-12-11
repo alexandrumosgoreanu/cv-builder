@@ -19,7 +19,12 @@ const ExperienceInfoItem = ({ company, position, location, startDate, endDate, d
                         <p className="position">{position}</p>
                 </div>
                 <div className="description">
-                    {description}
+                    <ul>
+                        {description.split('\n').map((item, index) => 
+                            (<li key={index}>{item} </li>)          //each new line in the textarea translates to a bullet point in the CV
+                        )}
+                    </ul>
+                    
                 </div>
             </div>
         </div>
