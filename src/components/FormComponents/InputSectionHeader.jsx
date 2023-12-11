@@ -1,4 +1,4 @@
-import '../../styles/InputSectionHeader.css'
+import '../../styles/FormStyles/InputSectionHeader.css'
 
 const InputSectionHeader = ({ sectionName, isClosed, toggleElems, iconName, setOpen }) => {
     return (

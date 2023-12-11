@@ -1,4 +1,4 @@
-import "../../styles/AddFormItem.css"
+import "../../styles/FormStyles/AddFormItem.css"
 
 const AddFormItem = ({ itemName,  onClick }) => {
     return (

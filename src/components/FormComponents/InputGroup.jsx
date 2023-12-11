@@ -1,4 +1,4 @@
-import '../../styles/InputGroup.css'
+import '../../styles/FormStyles/InputGroup.css'
 
 const InputGroup = ({id, placeholder, type, label, onChange, optional, value}) => {
     return (

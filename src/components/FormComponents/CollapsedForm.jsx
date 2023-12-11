@@ -1,4 +1,4 @@
-import "../../styles/CollapsedForm.css";
+import "../../styles/FormStyles/CollapsedForm.css";
 
 const CollapsedForm = ({ onClick, title, removeItem, isHidden, toggleItemHidden }) => {
     return (
