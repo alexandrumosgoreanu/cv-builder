@@ -1,3 +1,4 @@
+import AddFormItem from './AddFormItem.jsx';
 import EducationForms from './EducationForms.jsx'
 import InputSectionHeader from './InputSectionHeader.jsx'
 
@@ -30,12 +31,10 @@ const EducationInputSection = ({
                     cancelForm={cancelForm}
                     saveForm={saveForm}
                 />
-                <button className="addEducation" type="button" onClick={createEducationItem}>
-                    <h4>
-                        <i className="fa-solid fa-plus" />
-                        Education
-                    </h4>
-                </button> 
+                <AddFormItem
+                    itemName="Education"
+                    onClick={createEducationItem}
+                />
             </div>
         </div>
     )

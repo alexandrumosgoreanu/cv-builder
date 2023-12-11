@@ -36,20 +36,6 @@ form {
   border-radius: 0.5rem;
 }
 
-.addEducation {
-  background-color: transparent;
-  padding: 4px;
-  border-radius: 10px;
-  border: 4px solid rgb(238, 240, 244);
-}
-
-.addEducation i {
-  margin-right: 5px;
-}
-
-.addEducation.closed {
-  visibility: hidden;
-}
 /* @keyframes logo-spin {
   from {
     transform: rotate(0deg);

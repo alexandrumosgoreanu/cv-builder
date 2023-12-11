@@ -1,0 +1,15 @@
+.addItemButton {
+    background-color: rgb(141, 188, 250);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid rgb(31, 31, 31);
+    margin: 10px 0;
+}
+  
+.addItemButton i {
+    margin-right: 5px;
+}
+  
+.addItemButton.closed {
+    visibility: hidden;
+}
