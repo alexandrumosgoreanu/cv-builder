@@ -13,12 +13,14 @@ const ExperienceInfoItem = ({ company, position, location, startDate, endDate, d
                     </div>
                 </div>
             </div>
-            <div className="company">
-                    <p><strong>{company}</strong></p>
-                    <p className="position">{position}</p>
-            </div>
-            <div>
-                {description}
+            <div className="right">
+                <div className="company">
+                        <p><strong>{company}</strong></p>
+                        <p className="position">{position}</p>
+                </div>
+                <div className="description">
+                    {description}
+                </div>
             </div>
         </div>
     )

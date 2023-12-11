@@ -1,5 +1,3 @@
-import '../../styles/EducationInfo.css'
-
 const EducationInfoItem = ({ degree, university, location, startDate, endDate }) => {
     return (
             <div className="itemInfo">

@@ -1,4 +1,3 @@
-import '../../styles/EducationInfoSection.css'
 import EducationInfoItem from './EducationInfoItem'
 
 const EducationInfoSection = ({ educationDetails }) => {

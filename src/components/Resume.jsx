@@ -1,4 +1,5 @@
-import '../styles/Resume.css'
+import '../styles/ResumeStyles/Resume.css'
+import '../styles/ResumeStyles/ItemInfo.css'
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import PersonalInfoSection from './ResumeComponents/PersonalInfoSection';
 import EducationInfoSection from './ResumeComponents/EducationInfoSection';

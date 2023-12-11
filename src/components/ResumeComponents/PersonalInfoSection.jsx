@@ -1,4 +1,4 @@
-import '../../styles/PersonalInfoSection.css'
+import '../../styles/ResumeStyles/PersonalInfoSection.css'
 
 const PersonalInfoSection = ({ fullName, email, phoneNumber, address}) => {
 
