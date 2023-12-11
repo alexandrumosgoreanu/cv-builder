@@ -1,8 +1,8 @@
 import '../../styles/EducationInfo.css'
 
-const EducationInfo = ({ degree, university, location, startDate, endDate }) => {
+const EducationInfoItem = ({ degree, university, location, startDate, endDate }) => {
     return (
-            <div className="educationInfo">
+            <div className="itemInfo">
                 <div className="left">
                     <div className="dates">
                         <p>
@@ -11,9 +11,9 @@ const EducationInfo = ({ degree, university, location, startDate, endDate }) => 
                             {endDate.split('-').reverse().join('/')}
                         </p>
                     </div>
-                <div>
-                    <p>{location}</p>
-                </div>
+                    <div>
+                        <p>{location}</p>
+                    </div>
                 </div>
                 <div className="university">
                     <p><strong>{university}</strong></p>
@@ -23,4 +23,4 @@ const EducationInfo = ({ degree, university, location, startDate, endDate }) => 
     )
 }
 
-export default EducationInfo;
+export default EducationInfoItem;

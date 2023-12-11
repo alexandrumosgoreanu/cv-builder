@@ -1,14 +1,13 @@
 import '../../styles/EducationInfoSection.css'
-import EducationInfo from './EducationInfo'
+import EducationInfoItem from './EducationInfoItem'
 
 const EducationInfoSection = ({ educationDetails }) => {
     return (
-        <div className="educationInfoSection">
+        <div className="infoSection">
             <h3>Education</h3>
-            {console.log(educationDetails)}
             {educationDetails.map((item) =>  item.isHidden ? null :
                 (       
-                <EducationInfo
+                <EducationInfoItem
                     key={item.key}
                     degree={item.degree}
                     university={item.university}
