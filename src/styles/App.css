@@ -30,7 +30,7 @@ form {
   flex-direction: column;
 }
 
-.container {
+.formContainer {
   margin-bottom: 2rem;
   background-color: var(--light-gray);
   border-radius: 0.5rem;

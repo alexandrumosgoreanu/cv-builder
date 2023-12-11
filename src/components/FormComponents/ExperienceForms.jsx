@@ -1,27 +1,26 @@
-import EducationItem from "./EducationItem";
 import CollapsedForm from "./CollapsedForm";
-import "../../styles/EducationForms.css"
+import ExperienceItem from "./ExperienceItem";
 
-const EducationForms = ({ educations, onChange, removeEducationItem, toggleFormCollapsed, toggleItemHidden, cancelForm, saveForm }) => {
+const ExperienceForms = ({ experiences, onChange, removeExperienceItem, toggleFormCollapsed, toggleItemHidden, cancelForm, saveForm }) => {
     return (
         <div className="forms">
-            {educations.map((item) => 
+            {experiences.map(item => 
                 item.isCollapsed ?
                 (
                     <CollapsedForm
                         key={item.key}
                         onClick={(e) => toggleFormCollapsed(e, item.key)}
-                        title={item.university}
-                        removeItem={(e) => removeEducationItem(e, item.key)}
+                        title={item.company}
                         isHidden={item.isHidden}
+                        removeItem={(e) => removeExperienceItem(e, item.key)}
                         toggleItemHidden={(e) => toggleItemHidden(e, item.key)}
                     />
                 ) : (
-                    <EducationItem
-                        education={item}
+                    <ExperienceItem
+                        experience={item}
                         key={item.key}
                         onChange={(e) => onChange(e, item.key)}
-                        removeEducationItem={(e) => removeEducationItem(e, item.key)}
+                        removeExperienceItem={(e) => removeExperienceItem(e, item.key)}
                         cancelForm={(e) => cancelForm(e, item.key)}
                         saveForm={(e) => saveForm(e, item.key)}
                     />
@@ -29,6 +28,6 @@ const EducationForms = ({ educations, onChange, removeEducationItem, toggleFormC
             )}
         </div>
     )
-};
+}
 
-export default EducationForms;
+export default ExperienceForms;

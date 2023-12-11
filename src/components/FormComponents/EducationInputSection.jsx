@@ -14,7 +14,7 @@ const EducationInputSection = ({
     saveForm }) => {
 
     return (
-        <div className="educationDetailsInputs container">
+        <div className="formContainer">
             <InputSectionHeader
                 sectionName="Education"
                 isClosed={true}

@@ -3,7 +3,7 @@ import PersonalDetails from "./PersonalDetails";
 
 const PersonalInputSection = ({toggleElems, handlePersonalDetailsChange}) => {
     return (
-        <div className="personalDetailsInputs container">
+        <div className="formContainer">
             <InputSectionHeader
                 sectionName="Personal details"
                 isClosed={true}

@@ -1,4 +1,6 @@
 .addItemButton {
+    width: 120px;
+    height: 1.5rem;
     background-color: rgb(141, 188, 250);
     padding: 4px;
     border-radius: 10px;

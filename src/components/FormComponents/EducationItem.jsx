@@ -45,7 +45,7 @@ const EducationItem = ({ education, onChange, removeEducationItem, cancelForm, s
                 onChange={onChange}
                 value={education.endDate ? education.endDate : null}
             />
-            <div className="educationItemButtons">
+            <div className="itemButtons">
                 <button className="delete" onClick={removeEducationItem}>
                     Delete
                 </button>

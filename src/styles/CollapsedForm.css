@@ -1,4 +1,4 @@
-.collapsedEducationItem {
+.collapsedItem {
   display:flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 
-.collapsedEducationItem:last-child {
+.collapsedItem:last-child {
   border-bottom: 5px solid var(--main-bg-color);
 }
 
