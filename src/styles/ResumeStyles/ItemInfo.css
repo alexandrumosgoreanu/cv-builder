@@ -37,7 +37,8 @@
 
 .degree,
 .position {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    color: rgb(83, 83, 83);
 }
 
 .description {
@@ -59,8 +60,7 @@ li + li {
 }
 .position {
     height: 1rem;
-    margin-left: 0.5rem;
-    color: rgb(83, 83, 83);
+    margin-left: 0.5rem; 
     text-align: end;
 }
 

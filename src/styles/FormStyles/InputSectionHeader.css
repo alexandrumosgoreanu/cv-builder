@@ -15,14 +15,25 @@
 }
 
 .closed {
-    display: none;
+    /* display: none; */
+    height: 0px;
+    transition: 0.05s;
+    visibility: hidden;
+    opacity: 0;
+    /* transform: translateY(-50px); */
+    transform-origin: top;
 }
 
 .chevron {
+    height: 0.75rem;
     transition: transform 0.3s ease-out;
 }
   
 .chevron.closed {
+    transform-origin: center;
+    height: 0.75rem;
     display: block;
+    visibility: visible;
+    opacity: 1;
     transform: rotate(-180deg);
 }
