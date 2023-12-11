@@ -8,14 +8,11 @@ import Resume from './components/Resume.jsx'
 import EducationInputSection from './components/FormComponents/EducationComponents/EducationInputSection.jsx'
 import PersonalInputSection from './components/FormComponents/PersonalComponents/PersonalInputSection.jsx'
 import ExperienceInputSection from './components/FormComponents/ExperienceComponents/ExperienceInputSection.jsx'
+import { personalDetailsExample, educationDetailsExample, experienceDetailsExample } from './components/exampleData.jsx'
+
 
 const App = () => {
-    const [personalDetails, setPersonalDetails] = useState({
-                                                              fullName: "Alexandru Mosgoreanu",
-                                                              email: "amosgoreanu@gmail.com",
-                                                              phoneNumber: "0755011638",
-                                                              address: "Bucharest, Romania"
-                                                          });
+    const [personalDetails, setPersonalDetails] = useState({});
     const [educationDetails, setEducationDetails] = useState([]);
     const [backupEducationDetails, setEducationBackup] = useState([]);
     const [experienceDetails, setExperienceDetails] = useState([]);
@@ -23,6 +20,12 @@ const App = () => {
     const [sectionOpen, setSectionOpen] = useState("personal");                                                  
 
     const setOpen = (sectioName) => setSectionOpen(sectioName);
+
+    const loadExampleData = () => {
+        setPersonalDetails(personalDetailsExample);
+        setEducationDetails(educationDetailsExample);
+        setExperienceDetails(experienceDetailsExample);
+    }
 
     const handlePersonalDetailsChange = (e) => {
         const id = e.target.id;
@@ -161,7 +164,7 @@ const App = () => {
 
     return (
       <>
-            <Header />
+            <Header loadExampleData={loadExampleData}/>
             <div className="app">  
                 <form className="leftSidebar" action="" onSubmit={(e) => e.preventDefault()} noValidate>
                     
