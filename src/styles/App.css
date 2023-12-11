@@ -30,12 +30,6 @@ form {
   flex-direction: column;
 }
 
-.formContainer {
-  margin-bottom: 2rem;
-  background-color: var(--light-gray);
-  border-radius: 0.5rem;
-}
-
 /* @keyframes logo-spin {
   from {
     transform: rotate(0deg);

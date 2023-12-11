@@ -1,8 +1,0 @@
-.forms.collapsed {
-    display: none;
-}
-
-.forms {
-  display: flex;
-  flex-direction: column;
-}

@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 import { useState } from 'react'
 import './styles/App.css'
+import './styles/FormSection.css'
 import { v4 as uuidv4 } from 'uuid'
 import Header from './components/Header.jsx'
 import Resume from './components/Resume.jsx'

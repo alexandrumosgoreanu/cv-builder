@@ -1,6 +1,5 @@
 import EducationItem from "./EducationItem";
 import CollapsedForm from "../CollapsedForm";
-import "../../../styles/EducationForms.css"
 
 const EducationForms = ({ educations, onChange, removeEducationItem, toggleFormCollapsed, toggleItemHidden, cancelForm, saveForm }) => {
     return (
