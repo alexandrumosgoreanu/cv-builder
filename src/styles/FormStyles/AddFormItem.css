@@ -6,8 +6,13 @@
     border-radius: 10px;
     border: 1px solid rgb(31, 31, 31);
     margin: 10px 0;
+    transition: 0.1s ease-in-out;
 }
-  
+
+.addItemButton:hover {
+    transform: scale(1.05)
+}
+
 .addItemButton i {
     margin-right: 5px;
 }

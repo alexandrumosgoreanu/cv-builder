@@ -13,9 +13,11 @@ const EducationInfoItem = ({ degree, university, location, startDate, endDate })
                         <p>{location}</p>
                     </div>
                 </div>
-                <div className="university">
-                    <p><strong>{university}</strong></p>
-                    <p className="degree">{degree}</p>
+                <div className="right">
+                    <div className="university">
+                        <p><strong>{university}</strong></p>
+                        <p className="degree">{degree}</p>
+                    </div>
                 </div>
             </div>
     )

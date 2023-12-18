@@ -5,6 +5,8 @@
     width: 100%;
     padding: 5px;
     cursor: pointer;
+    transition: opacity, transform, visibility;
+    transition-duration: 0.25s;
 }
   
 .inputContainerHeader {
@@ -20,8 +22,8 @@
     transition: 0.05s;
     visibility: hidden;
     opacity: 0;
-    /* transform: translateY(-50px); */
     transform-origin: top;
+    z-index: 100;
 }
 
 .chevron {

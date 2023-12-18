@@ -25,14 +25,13 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 10px;
 }
 
 .university,
 .company {
     text-align: left;
     font-size: 1rem;
-    height: 1.5rem;
+    height: 1rem;
 }
 
 .degree,
@@ -62,9 +61,11 @@ li + li {
     height: 1rem;
     margin-left: 0.5rem; 
     text-align: end;
+    align-self: flex-end;
 }
 
 .company {
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
