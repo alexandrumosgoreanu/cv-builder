@@ -20,17 +20,17 @@ const Resume = ({ personalDetails, educationDetails, experienceDetails }) => {
                 address={address}
             />
             
-            {educationDetails.length >= 1 && 
-                <EducationInfoSection
-                    educationDetails={educationDetails}
-                /> 
-            }    
-
             {experienceDetails.length >= 1 &&
                 <ExperienceInfoSection
                     experienceDetails={experienceDetails}
                 />
             }    
+
+            {educationDetails.length >= 1 && 
+                <EducationInfoSection
+                    educationDetails={educationDetails}
+                /> 
+            }     
         </div>
     )
 }

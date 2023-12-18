@@ -118,7 +118,6 @@ const App = () => {
     const cancelExperienceForm = (e, key) => cancelForm(e, key, "experience");
 
     const saveForm = (e, key, target) => {
-        
         switch(target) {
             case "education":
                 toggleEducationFormCollapsed(e, key); 
