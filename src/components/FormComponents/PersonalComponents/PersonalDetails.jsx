@@ -31,6 +31,20 @@ const PersonalDetails = ({ onChange }) => {
                 placeholder = "City, Country"
                 onChange = {onChange}
             />
+            <InputGroup
+                type = "text"
+                id = "linkedin"
+                label = "LinkedIn"
+                placeholder = "URL"
+                onChange = {onChange}
+            />
+            <InputGroup
+                type = "text"
+                id = "github"
+                label = "Github"
+                placeholder = "URL"
+                onChange = {onChange}
+            />
         </div>
     )
 }

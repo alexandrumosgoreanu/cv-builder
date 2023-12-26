@@ -3,7 +3,8 @@ export const personalDetailsExample = {
     email: "amosgoreanu@gmail.com",
     phoneNumber: "+40 755 011 638",
     address: "Bucharest, Romania",
-    isCollapsed: true
+    linkedin: "https://www.linkedin.com/in/alexandru-mosgoreanu",
+    github: "https://www.github.com/alexandrumosgoreanu"
 };
 
 export const educationDetailsExample = [{

@@ -4,16 +4,33 @@
 }
 .contactInfo {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    gap: 10px;
+    gap: 5px;
     flex-wrap: wrap;
     font-size: 0.8rem;
 }
 
 .contactInfo > * {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px
+}
+
+.contactInfoLine > * {
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 4px;
+    color: black;
+}
+
+a, a > * {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
 }

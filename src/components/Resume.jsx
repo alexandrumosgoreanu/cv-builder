@@ -9,7 +9,7 @@ import ExperienceInfoSection from './ResumeComponents/ExperienceInfoSection';
 // educationDetails = array of objects
 
 const Resume = ({ personalDetails, educationDetails, experienceDetails }) => {
-    const {fullName, email, phoneNumber, address} = personalDetails;
+    const {fullName, email, phoneNumber, address, linkedin, github} = personalDetails;
 
     return (
         <div className="resume">
@@ -18,6 +18,8 @@ const Resume = ({ personalDetails, educationDetails, experienceDetails }) => {
                 email={email}
                 phoneNumber={phoneNumber}
                 address={address}
+                linkedin={linkedin}
+                github={github}
             />
             
             {experienceDetails.length >= 1 &&
