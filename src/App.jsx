@@ -190,20 +190,6 @@ const App = () => {
                         setOpen={setOpen}
                     />
                     
-                    <EducationInputSection
-                        educationDetails={educationDetails}
-                        toggleElems={toggleElems}
-                        handleEducationDetailsChange={handleEducationDetailsChange}
-                        removeEducationItem={removeEducationItem}
-                        createEducationItem={createEducationItem}
-                        toggleFormCollapsed={toggleEducationFormCollapsed}
-                        toggleItemHidden={toggleEducationItemHidden}
-                        cancelForm={cancelEducationForm}
-                        saveForm={saveEducationForm}
-                        sectionOpen={sectionOpen}
-                        setOpen={setOpen}
-                    />
-                    
                     <ExperienceInputSection
                         experienceDetails={experienceDetails}
                         toggleElems={toggleElems}
@@ -217,12 +203,26 @@ const App = () => {
                         sectionOpen={sectionOpen}
                         setOpen={setOpen}
                     />
+
+                    <EducationInputSection
+                        educationDetails={educationDetails}
+                        toggleElems={toggleElems}
+                        handleEducationDetailsChange={handleEducationDetailsChange}
+                        removeEducationItem={removeEducationItem}
+                        createEducationItem={createEducationItem}
+                        toggleFormCollapsed={toggleEducationFormCollapsed}
+                        toggleItemHidden={toggleEducationItemHidden}
+                        cancelForm={cancelEducationForm}
+                        saveForm={saveEducationForm}
+                        sectionOpen={sectionOpen}
+                        setOpen={setOpen}
+                    />
                 </form>
 
                 <Resume 
-                        personalDetails={personalDetails}
-                        educationDetails= {educationDetails}
-                        experienceDetails={experienceDetails}
+                    personalDetails={personalDetails}
+                    educationDetails= {educationDetails}
+                    experienceDetails={experienceDetails}
                 />
             </div>
       </>

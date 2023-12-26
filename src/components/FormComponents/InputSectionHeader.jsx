@@ -28,7 +28,7 @@ const InputSectionHeader = ({ sectionName, isClosed, toggleElems, iconName, setO
                 <i className={`${iconName}`}/>
                 {sectionName}
             </h2>
-            <i className={`fa-solid fa-chevron-up chevron toggle ${isClosed && "closed"}`}></i>
+            <i className={`fa-solid fa-chevron-up chevron toggle ${!isClosed && "closed"}`}></i>
         </button>
     );
 };
