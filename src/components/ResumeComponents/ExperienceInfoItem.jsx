@@ -20,8 +20,9 @@ const ExperienceInfoItem = ({ company, position, location, startDate, endDate, d
                 </div>
                 <div className="description">
                     <ul>
-                        {description.split('\n').map((item, index) => 
-                            (<li key={index}>{item} </li>)          //each new line in the textarea translates to a bullet point in the CV
+                        {description.split('\n').map((item, index) =>  //each new line in the textarea translates to a bullet point in the CV
+                            index === description.split('\n').length-1 ? (<li className="descriptionSkills" key={index}>{item} </li>)  // make skills bold
+                                : (<li key={index}>{item} </li>)   
                         )}
                     </ul>
                     

@@ -24,26 +24,41 @@ export const experienceDetailsExample = [{
     company: "Rockwell Automation",
     position: "Software Developer",
     location: "Bucharest, Romania",
-    startDate: "2023-01",
-    endDate: "2023-12",
+    startDate: "2023-06",
+    endDate: "present",
     description: 
-        `Developed and implemented scalable IoT and PLM software solutions using ThingWorx and Windchill platforms, resulting in increased operational efficiency and improved user experience.
+        `Developed and implemented scalable IoT and PLM software solutions using ThingWorx and Windchill platforms on Azure cloud.
         Optimized existing software applications by integrating advanced ThingWorx features, such as real-time data analytics and predictive maintenance, resulting in enhanced functionality and performance of edge devices.
-        Conducted comprehensive testing and debugging of ThingWorx applications to ensure seamless integration and adherence to quality standards, resulting in successful deployment and provisioning of 300,000 medical IoT devices.
-        Led the migration of legacy data and documents to Windchill, ensuring data integrity, accuracy, and compliance with industry standards, resulting in reduced time-to-market by 10%.
-        Skills used: Azure • Java • JavaScript • React • Node • Docker • Oracle SQL • Thingworx IoT • Windchill PLM`,
+        Conducted comprehensive testing and debugging of ThingWorx applications to ensure seamless integration and adherence to quality standards, resulting in successful deployment and provisioning of 500,000 medical IoT devices.
+        Led the customization of Windchill workflows, ensuring data integrity, accuracy, and compliance with industry standards, resulting in reduced time-to-market by 10%.
+        Skills used: Azure • Java • JavaScript • React • Node • Docker • Terraform • Oracle SQL • Thingworx IoT • Windchill PLM`,
+    isCollapsed: true,
+    isHidden: false
+},
+{   
+    key: "exp1",
+    company: "FEV Gmbh",
+    position: "Software Developer",
+    location: "Bucharest, Romania",
+    startDate: "2023-01",
+    endDate: "2023-06",
+    description:
+        `Developed and implemented robust software solutions for automotive electronic control units (ECUs) to improve performance and functionality, resulting in a 20% reduction in overall system response time.
+        Implemented software for emissions control strategies in order to meet emission standards.
+        Designed and executed comprehensive test plans to ensure the accuracy and efficiency of ECU software, resulting in reduction of software defects and customer reported issues.
+        Skills used: C/C++ • RTOS • MATLAB • Simulink • ASCET • Embedded Software • AUTOSAR`,
     isCollapsed: true,
     isHidden: false
 },
 {
-    key: "exp2",
+    key: "exp3",
     company: "Amazon",
-    position: "Software Developer Internship",
+    position: "Software Development Internship",
     location: "Barcelona, Spain",
     startDate: "2022-08",
     endDate: "2022-11",
     description: 
-        `Managed to reduce 400 SDE hours/year of manually testing by implementing an E2E and Canary IaaS testing framework using Cypress.io and AWS services that allow the deployment pipelines to become full CI/CD, thus reducing deployment time and ensuring that high quality code is delivered to the production environments.
+        `Managed to reduce 400 SDE hours/year of manually testing by implementing an E2E and Canary IaaS testing framework using Cypress.io and AWS services that allow the deployment pipelines to become full CI/CD, thus reducing deployment time by using the tests as an approval step in the deployment process and ensuring that high quality code is delivered to the production environments.
         Implemented an alarming and logging system that notifies the development team about problems before they reached our key stakeholders. This allowed the achievement of a 99.9% SLA and increased overall customer satisfaction.
         Successfully integrated both old-gen (LPT) and new-gen (CDK) AWS Cloud infrastructure in the same cloudframework for both the FE and BE pipelines, thus optimizing resources allocation and lowering billable monthly costs by half.
         Skills used: JavaScript • TypeScript • React • Node.js • Cypress.io • AWS CDK (EC2, VPC, S3, IAM, SSM, DynamoDB, Lambda, CloudFormation) • AWS Cloud • CI/CD Pipelines`,
@@ -51,7 +66,7 @@ export const experienceDetailsExample = [{
     isHidden: false
 },
 {
-    key: "exp3",
+    key: "exp4",
     company: "IBM",
     position: "QA Engineer",
     location: "Bucharest, Romania",

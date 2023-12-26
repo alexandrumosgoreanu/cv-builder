@@ -77,3 +77,7 @@ li + li {
 .university {
     margin-top: -4px;
 }
+
+.descriptionSkills {
+    font-weight: 600;
+}
