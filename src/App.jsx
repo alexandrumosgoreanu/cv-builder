@@ -159,7 +159,7 @@ const App = () => {
     const saveAsPdf = () => {
         const cv = document.querySelector(".resume");
         const options = {
-          margin: 0,
+          margin: 3,
           filename: "cv.pdf",
           enableLinks: true,
           image: { type: "jpeg", quality: 1},
