@@ -8,8 +8,8 @@ import Resume from './components/Resume.jsx'
 import EducationInputSection from './components/FormComponents/EducationComponents/EducationInputSection.jsx'
 import PersonalInputSection from './components/FormComponents/PersonalComponents/PersonalInputSection.jsx'
 import ExperienceInputSection from './components/FormComponents/ExperienceComponents/ExperienceInputSection.jsx'
-import { personalDetailsExample, educationDetailsExample, experienceDetailsExample } from './components/exampleData.jsx'
-
+import { personalDetailsExample, educationDetailsExample, experienceDetailsExample } from './utils/exampleData.jsx'
+import html2pdf from 'html2pdf.js'
 
 const App = () => {
     const [personalDetails, setPersonalDetails] = useState({});
@@ -156,6 +156,19 @@ const App = () => {
         }
     }
 
+    const saveAsPdf = () => {
+        const cv = document.querySelector(".resume");
+        const options = {
+          margin: 0,
+          filename: "cv.pdf",
+          enableLinks: true,
+          image: { type: "jpeg", quality: 1},
+          html2canvas: { scale: 3 },
+          jsPDF: { unit: "mm", format: "letter", orientation: "portrait" },
+        };
+        html2pdf().set(options).from(cv).toPdf().save();
+    }
+
     const toggleEducationFormCollapsed = (e, key) => toggleItem(e, key, 'isCollapsed', "education");
     const toggleExperienceFormCollapsed = (e, key) => toggleItem(e, key, 'isCollapsed', "experience");
     const toggleEducationItemHidden = (e, key) => toggleItem(e, key, 'isHidden', "education");
@@ -163,7 +176,10 @@ const App = () => {
 
     return (
       <>
-            <Header loadExampleData={loadExampleData}/>
+            <Header
+                loadExampleData={loadExampleData}
+                saveAsPdf={saveAsPdf}
+            />
             <div className="app">  
                 <form className="leftSidebar" action="" onSubmit={(e) => e.preventDefault()} noValidate>
                     
